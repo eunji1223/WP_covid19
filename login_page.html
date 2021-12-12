@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>korea_institution_covid19_login</title>
+        <link rel="stylesheet" href="./static/layout.css">
+        <link rel="stylesheet" href="./static/font.css">
+    </head>
+    <body class="login_body">
+        <div id="LoginBox">
+           <div class="LoginTitle">Log-in</div>
+           <form>
+               Id/ E-mail: <input type="text" placeholder="abcde34@naver.com" onblur="checkE(this)"><br>
+               <div id="errorE"></div>
+               Password : <input type="password" onblur="checkP(this)"><br>
+               <div id="errorP"></div>
+               <label><input type="radio"> Remember Me<br></label>
+               <input type="button" value="Login" onclick="login()">
+           </form>
+           <div class="siteMove">
+               <a href="./register_page.html">회원가입하기</a><br>
+               <a href="./main_page.html">돌아가기</a>
+           </div>
+        </div>
+    </body>
+    <script>
+        function checkE(obj){
+            var error=document.getElementById('errorE');
+            if(obj.value==""){
+                error.innerHTML='다시 입력해주세요';
+                error.style.color="red";
+                error.style.fontSize="15px";
+                error.style.margin="-25px 0px 20px 45%";
+                obj.placeholder="id 혹은 email을 입력해주세요";
+                obj.focus();
+            }
+            else if(obj.value.length<5){
+                error.innerHTML='너무 짧습니다.';
+                error.style.color="red";
+                error.style.fontSize="15px";
+                error.style.margin="-25px 0px 20px 45%";
+                obj.focus();
+            }
+            else{
+                error.innerHTML='';
+            }
+        }
+        function checkP(obj){
+            var error=document.getElementById('errorP');
+            if(obj.value==""){
+                error.innerHTML='다시 입력해주세요';
+                error.style.color="red";
+                error.style.fontSize="15px";
+                error.style.margin="-25px 0px 20px 45%";
+                obj.focus();
+            }
+            else if(obj.value.length<4){
+                error.innerHTML='너무 짧습니다.';
+                error.style.color="red";
+                error.style.fontSize="15px";
+                error.style.margin="-25px 0px 20px 45%";
+                obj.focus();
+            }
+            else{
+                error.innerHTML='';
+            }
+        }
+        function login(){
+            alert('로그인 성공했습니다!');
+        }
+    </script>
+</html>

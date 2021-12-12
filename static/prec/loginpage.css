@@ -1,0 +1,54 @@
+.login_body{
+    font-size: 20px;
+    font-family: 'JSongMyung-Regular-KO';
+    background-color:rgb(234, 249, 255);
+}
+.login_body>#LoginBox{
+    margin: 100px 20%;
+    padding: 30px;
+    border: 3px solid rgb(34, 84, 158);
+    background-color: white;
+}
+.LoginTitle{
+    font-size: 1.2em;
+    font-family: 'SF_HambakSnow';
+    margin-bottom: 30px;
+}
+#LoginBox>form{
+    padding: 20px 15%;
+}
+#LoginBox input[type="text"]{
+    padding: 5px;
+    margin-bottom: 25px;
+    width: 250px;
+    border: 2px solid rgb(34, 84, 158);
+    border-radius: 10px;
+}
+#LoginBox input[type="password"]{
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 250px;
+    border: 2px solid rgb(34, 84, 158);
+    border-radius: 10px;
+}
+#LoginBox input[type="radio"]{
+    margin-left: 40%;
+    margin-bottom: 20px;
+}
+#LoginBox input[type="button"]{
+    width: 90%;
+    height: 40px;
+    font-size: 25px;
+    font-family: 'SF_HambakSnow';
+    border: 3px solid rgb(34, 84, 158);
+    background-color: rgb(135, 176, 222);
+}
+
+#LoginBox>.siteMove{
+    margin-left: 65%;
+    padding-bottom: 30px;
+}
+#LoginBox a{
+    color: black;
+    text-decoration: none;
+}

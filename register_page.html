@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./static/font.css">
+        <link rel="stylesheet" href="./static/layout.css">
+    </head>
+    <body class="login_body">
+        <div id="LoginBox">
+            <div class="LoginTitle">Register</div>
+            <form>
+                Id/ E-mail: <input type="text" placeholder="abcde34@naver.com" onblur="checkM(this)"><br>
+                <div id="errorM"></div>
+                Password : <input type="password" id="fpass" onblur="checkPw(this)"><br>
+                <div id="errorPw"></div>
+                Confirm Password : <input type="password" id="spass"><br>
+                확인용 질문: <input type="text" list="question">
+                <datalist id="question">
+                    <option value="어렸을 때 별명은?"></option>
+                    <option value="초등학교 이름은?"></option>
+                    <option value="아버지의 성함은?"></option>
+                    <option value="가장 좋아하는 장소는?"></option>
+                    <option value="가장 좋아하는 연예인은?"></option>
+                </datalist><br>
+                질문의 답: <input type="text"><br>
+                <input type="button" value="join" onclick="passwordC()">
+            </form>
+            <div class="siteMove">
+                <a href="./login_page.html">돌아가기</a>
+            </div>
+         </div>     
+    </body>
+    <script>
+        function checkM(obj){
+            var error=document.getElementById('errorM');
+            if(obj.value==""){
+                error.innerHTML='다시 입력해주세요';
+                error.style.color="red";
+                error.style.fontSize="15px";
+                error.style.margin="-25px 0px 10px 45%";
+                obj.focus();
+            }
+            else if(obj.value.length<5){
+                error.innerHTML='너무 짧습니다.';
+                error.style.color="red";
+                error.style.fontSize="15px";
+                error.style.margin="-25px 0px 10px 45%";
+                obj.focus();
+            }
+            else{
+                error.innerHTML='';
+            }
+        }
+        function checkPw(obj){
+            var error=document.getElementById('errorPw');
+            if(obj.value==""){
+                error.innerHTML='다시 입력해주세요';
+                error.style.color="red";
+                error.style.fontSize="15px";
+                error.style.margin="-25px 0px 10px 45%";
+                obj.focus();
+            }
+            else if(obj.value.length<4){
+                error.innerHTML='너무 짧습니다.';
+                error.style.color="red";
+                error.style.fontSize="15px";
+                error.style.margin="-25px 0px 10px 45%";
+                obj.focus();
+            }
+            else{
+                error.innerHTML='';
+            }
+        }
+
+        function passwordC(){
+            var first=document.getElementById('fpass');
+            var second=document.getElementById('spass');
+            if(first.value!=second.value){
+                alert('비밀번호가 일치하지 않습니다.');
+            }
+            else{
+                alert("회원가입 되셨습니다.")
+            }
+        }
+    </script>
+</html>
